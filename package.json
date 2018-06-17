@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "serv":"static build",
+    "serv": "static build",
     "build": " cross-env NODE_ENV=production gulp build&& cross-env NODE_ENV=production webpack --config webpack.spa.config.js --progress --hide-modules",
     "dev:mpa": "cross-env NODE_ENV=development gulp",
     "dev:spa": "cross-env NODE_ENV=development webpack-dev-server --config webpack.spa.config.js --open --hot",
@@ -54,6 +54,7 @@
     "postcss-inline-svg": "^3.1.1",
     "postcss-loader": "^2.1.5",
     "postcss-nested": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
     "postcss-rgb": "^1.0.0",
     "postcss-scss": "^1.0.5",
     "postcss-svgo": "^2.1.6",

@@ -1,0 +1,39 @@
+.hero_user{
+  background: url('/assets/images/bg/stars.png') center center /cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 459px;
+  height: 270px;
+  }
+
+  .user-photo{
+    background: url('/assets/images/avatar/avatar_about.jpg') center center /cover no-repeat;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .user__description{
+    text-align: center;
+    
+  }
+
+  .user__description{
+     color: #fff;
+  
+  }
+
+  .user__name--about{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 35px;
+  }
+
+  .user__info{
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+  }

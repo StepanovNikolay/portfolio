@@ -1,0 +1,57 @@
+.hero{
+  background-image: url('/assets/images/bg/photo-1440558547120-1c1cae0397a1.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+min-height:650px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.about{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+}
+
+.map{
+  background-image: url('/assets/images/bg/Layer 1.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.auth-block{
+  background-image: url('/assets/images/bg/photo-1440558547120-1c1cae0397a1.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.arctiles{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}

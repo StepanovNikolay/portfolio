@@ -1,0 +1,20 @@
+.social__link-pic{
+  width: 32px;
+  height: 15px;
+  fill: #fff;
+  &:hover{
+    fill: #004cd1;
+
+  }
+}
+
+.socials{
+  display: flex;
+
+}
+
+.hero__links{
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}

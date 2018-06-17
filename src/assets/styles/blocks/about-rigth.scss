@@ -1,0 +1,26 @@
+.about__rigth{
+  width: 50%;
+  position: relative;
+}
+
+.block-subtitle{
+  font-family: 'Sansus Webissimo';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 34px;
+  width: 260px;
+  &:after{
+   content: "";
+   background: #474b57;
+   width: 90px;
+   height: 4px;
+   display: inline-block;
+
+  }
+}
+
+.about__right-description{
+  font-size: 16px;
+  width: 534px;
+  
+}

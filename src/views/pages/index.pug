@@ -1,11 +1,25 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
-    h1 1111
-     
-      a(href="../../../dist/about.html") ссылка
-        
-      
+ .auth-block
+  .auth-block__content 
+    .user
+      .user-photo
+      .user__description
+      .user__name.user__name--auth Степанов Николай
+      .user__info Личный сайт веб разработчика
+    .auth-block__social
+        ul.socials.socials--auth
+         each item in ['vk','github', 'in']
+          li.social__item.social__item--auth
+           a(href="#").social__link
+            +icon(item,'social__link-pic')
+    .auth-block__contacs
+       nav.menu
+        ul.menu__title.menu__title--auth 
+         each item in ['Мои работы','Обо мне','Блог']
+          li.menu_list.menu_list--auth
+          a(href="#").menu__link.menu__link--auth #{item}    
+  span.auth-text
+    p © Степанов Николай | Создано с любовью в LoftSchool | 2018       
+ a(href="#").auth-link Авторизироваться      

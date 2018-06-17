@@ -1,0 +1,58 @@
+.contacs__icon-img{
+    width: 40px;
+    height: 40px; 
+    fill: #004cd1;
+}
+
+.contacs__item--about{
+  display: flex;
+ flex-grow: 1;
+ margin-bottom: 3%;
+ 
+}
+
+.contacs{
+  width: 560px;
+  
+  background-color: #fff;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 18%;
+}
+
+.contacs__list--about{
+display: flex;
+width: 560px;
+flex-flow: wrap;
+
+}
+
+.contacs__title--about{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  color: #787a81;
+  width: 200px;
+  font-size: 16px;
+}
+
+
+.contacs__icon{
+  margin-right: 3%;
+}
+
+
+.block-subtitle--heigt{
+  height: 100px;
+  &:after{
+    position: relative;
+    right: 43%;
+    top: 39%;
+  }
+
+}
+
+
+

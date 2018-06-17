@@ -1,0 +1,29 @@
+.user-description-avatar{
+  width: 440px;
+  height: 390px;
+  
+}
+
+
+.user-description__text{
+  width: 422px;
+}
+
+.about__left{
+  width: 50%;
+  position: relative;
+  
+}
+.user-description__img{
+  z-index: 1000;
+}
+
+.block-title{
+    background: url('/assets/images/bg/stars2.png')center center /cover no-repeat;
+    font-family: 'Sansus Webissimo';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 64px;
+    width: 200px;
+    height: 200px;
+}

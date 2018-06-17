@@ -1,0 +1,48 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Блог'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+ section.hero
+  .hero__links
+   ul.socials
+    -
+     var social =[
+       ['vk', '$https://vk.com/'],
+       ['github', '$https://github.com/StepanovNikolay'],
+       ['in', '$https://ru.linkedin.com/']
+     ]
+    each item in social
+     li.social__item
+      a(href='#{item[1]}').social__link
+       +icon(item[0],'social__link-pic')
+  .hero__menu
+   a(href="#").hamburger
+    +icon('hamburger','hamburger-pic')
+  .hero__title
+   .section-title
+     img(src="", alt="").section__title-pic
+     .hero_user
+      .user
+       .user-photo
+       .user__description
+        .user__name.user__name--about БЛОГ
+        .user__info статьи, которые я написал
+ section.arctiles
+  .blog-navigation 
+   nav.blog__menu
+    ul.blog__title 
+      -
+       var navigation = [
+         ['#','Самое важное в SASS'],
+         ['#','Приёмы в вёрстке, без которых не обходится ни один сайт'],
+         ['#','Самый необходимый набор Gulp плагинов'],
+         ['#','Почему я выбрал Jade']
+       ]
+      each item in navigation
+       li.blog__list
+        a(href="item[0]").blog__elem #{item[1]}

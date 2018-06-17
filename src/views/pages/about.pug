@@ -7,4 +7,98 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  123123
+ section.hero
+  .hero__links
+   ul.socials
+    -
+     var social =[
+       ['vk', '$https://vk.com/'],
+       ['github', '$https://github.com/StepanovNikolay'],
+       ['in', '$https://ru.linkedin.com/']
+     ]
+    each item in social
+     li.social__item
+      a(href='#{item[1]}').social__link
+       +icon(item[0],'social__link-pic')
+  .hero__menu
+   a(href="#").hamburger
+    +icon('hamburger','hamburger-pic')
+  .hero__title
+   .section-title
+     img(src="", alt="").section__title-pic
+     .hero_user
+      .user
+       .user-photo
+       .user__description
+        .user__name.user__name--about Степанов Николай
+        .user__info Личный сайт веб разработчика
+           
+  .hero__down-btns
+   a(href="#").down-btn
+    +icon('arrow_down','down-btn-pic')
+ 
+ section.about
+  .about__left
+   .about__left-title
+    .block-title Обо мне 
+   .about__left-content
+    .user-description   
+      .user-description__img
+       img(src="/assets/images/avatar/avatar_about.jpg", alt="").user-description-avatar
+      .user-description__data
+        .block-subtitle Кто я
+        .user-description__text.text-content
+         p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+         p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+  .about__rigth
+     .about__right-title     
+       .block-subtitle Чем я могу быть вам полезен
+     .about__right-description.text-content
+       p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+     .about__right-content
+     -
+       var skills=[
+         ['Frontend', [['Html5',30],['css3',20],['JavaScript &jQuery',50]]],
+         ['Backend', [['PHP',30],['mySQL',20],['Node.js &npm',50],['Mongo.db',50]]],
+         ['WorkFlow', [['Git',30],['Gulp',20],['Bower',50]]],
+       ]
+     ul.skills-list
+       each skillsrow in skills
+        li.skills-list__item.skills-row
+         .skills-row__title #{skillsrow[0]}
+          ul.skills-row__list
+           each skill in skillsrow[1]
+             li.skills-row__item
+               figure.skill
+                svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill-figure
+                  circle(cx="50" cy="50" r="40").skill__circle.skill__circle-under
+                  circle(cx="50" cy="50" r="40").skill__circle.skill__circle-above
+               .skill__title #{skill[0]} 
+  .tringle
+    .tringle__left
+     svg(viewBox="0 0 100 100" preserveAspectRatio="none").polygon__left
+      polygon(points='0,0,0,110, 1000,110').element-left
+    .tringle__right
+     svg(viewBox="0 0 100 100" preserveAspectRatio="none").polygon__right
+      polygon(points='110,0,-1000,150, 110,200').element-right
+ section.map
+  .goggle-map
+  .map-data 
+   .contacs 
+     h2.contacs__title
+     .block-subtitle.block-subtitle--heigt контакты
+     addres.contacs-data
+      ul.contacs__list.contacs__list--about
+       -
+         var contacs = [
+           ['skype','skype_kdn'],
+           ['phone_n', '+79142222790'],
+           ['envelope','stepanovnikolaj30@gmail.com'],
+           ['map_n','Набережная 96/1']
+         ]
+       each item in contacs
+         li.contacs__item.contacs__item--about
+            .contacs__icon.contacs__icon--about
+             +icon(item[0],'contacs__icon-img')
+            .contacs__title.contacs__title--about #{item[1]} 
+            
