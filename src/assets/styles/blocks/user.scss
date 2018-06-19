@@ -1,5 +1,5 @@
 .hero_user{
-  background: url('/assets/images/bg/stars.png') center center /cover no-repeat;
+  background: url('./assets/images/bg/stars.png') center center /cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +8,7 @@
   }
 
   .user-photo{
-    background: url('/assets/images/avatar/avatar_about.jpg') center center /cover no-repeat;
+    background: url('./assets/images/avatar/avatar_about.jpg') center center /cover no-repeat;
     width: 130px;
     height: 130px;
     margin: 0 auto;
