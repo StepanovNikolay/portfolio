@@ -1,0 +1,22 @@
+.blog__elem{
+  text-decoration: none;
+  color: #7c7d82;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    color: #004cd1;
+
+  }
+}
+
+.blog__list{
+  height: 40px;
+  width: 260px;
+  margin-bottom: 10%;
+}
+
+.arcticle__header{
+  
+}

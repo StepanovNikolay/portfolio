@@ -1,6 +1,8 @@
 .about__rigth{
   width: 50%;
   position: relative;
+  z-index: 1000;
+  padding-left: 10%;
 }
 
 .block-subtitle{
@@ -8,19 +10,41 @@
   font-weight: normal;
   font-style: normal;
   font-size: 34px;
-  width: 260px;
+  text-transform: uppercase;
   &:after{
    content: "";
    background: #474b57;
    width: 90px;
-   height: 4px;
+   height: 2px;
    display: inline-block;
 
   }
 }
 
+.block-subtitle--rigth{
+  width: 306px;
+  position: relative;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 125px;
+ &:after{
+  position: relative;
+  top: 10%;
+ }
+
+}
 .about__right-description{
   font-size: 16px;
   width: 534px;
   
+  
+}
+
+
+.about__right-description{
+  font-size: 16px;
+  margin-bottom: 10%;
 }
