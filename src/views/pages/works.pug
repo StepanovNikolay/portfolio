@@ -1,0 +1,102 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+ section.hero.hero--works
+  .hero__links
+   ul.socials
+    -
+     var social =[
+       ['vk', '$https://vk.com/'],
+       ['github', '$https://github.com/StepanovNikolay'],
+       ['in', '$https://ru.linkedin.com/']
+     ]
+    each item in social
+     li.social__item
+      a(href='#{item[1]}').social__link
+       +icon(item[0],'social__link-pic')
+  .hero__menu
+   a(href="#").hamburger
+    +icon('hamburger','hamburger-pic')
+  .hero__title
+   .section-title
+     img(src="", alt="").section__title-pic
+     .hero_user
+      .user
+       .user-photo
+       .user__description
+        .user__name.user__name--about Степанов Николай
+        .user__info Личный сайт веб разработчика
+           
+  .hero__down-btns
+   a(href="#").down-btn
+    +icon('arrow_down','down-btn-pic')
+  .myworks
+   .block-title.block-title--works мои работы
+     img(src="./assets/images/bg/stars3.png", alt="" class="stars-pic stars-pic--works")
+ section.slider
+  .slider__left
+   ul.slider__title
+    li.slider__element
+     .block-subtitle.block-subtitle--rigth сайт школы онлайн образования
+    li.slider__element 
+     .slider__text
+      span.text html, css, javascript
+    li.slider__element   
+     .slider__btn
+      button.slider-click Посмотреть сайт
+       +icon('link','button-pic')  
+  .slider-right
+   .slider__block1
+     img(src="./assets/images/bg/fon-block1.png", alt="" class="block-img")
+   .slider__block2
+    .slider-img
+     img(src="./assets/images/bg/fon-block2.jpg", alt="" class="block-img")
+    +icon('portf_arrow_down','block-pick')
+   .slider__block3
+    .slider-img.slider-img--block3
+     img(src="./assets/images/bg/fon-block3.jpg", alt="" class="block-img") 
+    +icon('portf_arrow_up','block-pick')
+ section.about-me
+  .about-me__head
+   .about-me__title
+    .block-title.block-title--works что обо мне говорят
+     img(src="./assets/images/bg/stars4.png", alt="" class="works-stars")
+   .about-me__coments
+     ul.about-me__list
+      li.about-me__elem
+       .about-me__img
+        img(src="./assets/images/avatar/Dima.png", alt="avatar" class="avatar")
+       .about-me__text1 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+       .about-me__text2 Ковальчук Дмитрий
+       .about-me__text3  — основатель Loftschool
+      li.about-me__elem
+       .about-me__img
+        img(src="./assets/images/avatar/Volodya.png", alt="avatar"  class="avatar")
+       .about-me__text1 Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+       .about-me__text2 Сабанцев Владимир 
+       .about-me__text3 — преподаватель
+  .forma-works
+   form.form(action="")
+    .form-title
+      .block-subtitle.block-subtitle--form связаться со мной 
+    label.form-block
+     input(type="text" class="form-input" placeholder="ваше имя" )
+    label.form-block
+     input(type="text" class="form-input" placeholder="ваш email" )
+    label.form-block
+     textarea(name="", cols="30", rows="10" class="form-textarea"  placeholder="ваше сообшение")
+    .form__btn
+     button.form-click Отправить
+     button.form-click Очистить
+  .up-click
+     a(href="#").down-btn.down-btn--up
+      +icon('arrow_down','up-btn-pic')
+  
+     
+     

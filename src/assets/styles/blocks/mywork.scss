@@ -1,0 +1,23 @@
+.myworks{
+  color: #fff;
+  background: url('./assets/images/bg/bg-works.png') center center /cover no-repeat;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.block-title--works{
+  position: relative;
+  top: 33%;
+}
+
+.stars-pic--works{
+  width: 240px;
+  height: 118px;
+  left: 11%;
+}

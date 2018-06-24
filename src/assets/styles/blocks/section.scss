@@ -20,10 +20,25 @@ justify-content: center;
   min-height:400px;
 }
 
+.hero--works{
+  height: 100vh;
+  min-height:650px;
+  background-image: url('./assets/images/bg/fon-hero-works.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-size: cover;
+}
+
 .about{
   position: relative;
   width: 100%;
   height: 130vh;
+  min-height: 650px;
+  display: flex;
+}
+.slider{
+  width: 100%;
+  height: 100vh;
   min-height: 650px;
   display: flex;
 }
@@ -63,11 +78,18 @@ justify-content: center;
   height: 182vh;
   display: flex;
   margin-bottom: 170px;
+ 
   
 }
 
 
-.wrapper--blog{
-  padding-bottom: 170px;
+.about-me{
+  position: relative;
+  background: url('./assets/images/bg/fon-aboutme.jpg')center center /cover no-repeat;
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
-
