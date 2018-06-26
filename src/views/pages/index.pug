@@ -51,9 +51,15 @@ block content
      .auth-block__contacs
         nav.menu
          ul.menu__title.menu__title--auth 
-          each item in ['Мои работы','Обо мне','Блог']
-           li.menu_list.menu_list--auth
-           a(href="#").menu__link.menu__link--auth #{item}
+            -
+             var nav =[
+               ['Мои работы','./works.html'],
+               ['Обомне','./about.html'],
+               ['Блог','./blog.html']
+             ]
+            each item in nav
+             li.menu_list.menu_list--auth
+              a(href=`${item[1]}`).menu__link.menu__link--auth #{item[0]}
    span.auth-text
      p © Степанов Николай | Создано с любовью в LoftSchool | 2018  
  a(href="#").auth-link Авторизироваться      

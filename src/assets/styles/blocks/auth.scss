@@ -8,7 +8,7 @@
   text-align: center;
   color: #fff;
   padding-top: 2%;
-  display: none;
+  
 }
 
 
@@ -29,19 +29,24 @@
 }
 
 .menu__link--auth{
-  width: calck(100%/3);
+  
   height: 50px;
   background: #0548bd;
-  border-right: 1px solid #fff;
- display: flex;
+  display: flex;
  align-items: center;
  justify-content: center; 
- transition: 0.3s;
- &:hover{
+  &:hover{
+   
    background: #0a3e98;
  }
+
+}
+
+.menu_list--auth{
+  width: 100%;
+  border-right: 1px solid #fff;
   &:last-child{
-    border: none;
+    border-right: none;
   }
 }
 

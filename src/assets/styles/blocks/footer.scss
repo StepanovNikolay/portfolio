@@ -62,3 +62,10 @@ font-size: 16px;
 .social__item--footer{
   margin-right: 10%;
 }
+
+
+.menu__link--footer{
+  &:hover{
+    color: #2b57a4;
+  }
+}

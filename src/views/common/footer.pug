@@ -5,9 +5,16 @@ footer.footer
     .footer__menu 
      nav.menu
       ul.menu__title.menu__title--footer
-       each item in ['Мои работы','Обо мне','Блог','Авторизация']
-        li.menu_list.menu_list--footer
-         a(href="#").menu__link #{item}
+       -
+        var nav = [
+          ['Мои работы','./works.html'],
+          ['Обомне','./about.html'],
+          ['Блог','./blog.html'],
+          ['Авторизация','./index.html'],
+        ]
+       each item in nav
+         li.menu_list.menu_list--footer
+          a(href=`${item[1]}`).menu__link.menu__link--footer #{item[0]}
     .footer__contacs
      ul.contacs__list.contacs__list--footer
        -
