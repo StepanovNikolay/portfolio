@@ -8,13 +8,16 @@
   text-align: center;
   color: #fff;
   padding-top: 2%;
-  
+  @include phones {
+     width: 23rem;
+  }
 }
 
 
 .menu__title--auth {
   display: flex;
   justify-content: center;
+
 }
 
 
