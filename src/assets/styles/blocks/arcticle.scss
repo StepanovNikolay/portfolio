@@ -6,6 +6,10 @@
   text-transform: uppercase;
   margin-bottom:2%;
   width: 733px;
+  @include tablets{
+    font-size: 30px;
+    width: 100%;
+  }
 }
 .arcticle__data{
 color: #abb4cc;
@@ -16,30 +20,47 @@ margin-bottom:2%;
   color: #474b57;
   width: 700px;
   margin-bottom: 2%;
-
+  @include tablets{
+    width: 100%;
+  }
 }
 
 
 .arcticle__text2{
   color: #474b57;
   width: 700px;
-
+ @include tablets{
+   width: 100%;
+ }
 }
 
 .blog-arctile{
   position: relative;
   left: 13%;
   z-index: 1000;
+  @include tablets {
+    left: 0;
+    width: 100%;
+    padding-left: 3%;
+  }
 }
 
 
-.blog-navigation {
-  z-index: 1000;
-  position: relative;
-}
 
 
 .arcticle__list{
-  margin-bottom: 10%;
-
+  margin-bottom: 22%;
+&:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: #ebebe4;
+  top: 50%;
+}
+ &:last-child{
+   &::after{
+     display: none;
+   }
+ }
 }

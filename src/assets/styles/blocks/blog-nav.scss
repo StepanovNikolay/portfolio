@@ -17,6 +17,19 @@
   margin-bottom: 10%;
 }
 
-.arcticle__header{
-  
+
+.blog-navigation {
+  z-index: 1000;
+  position: relative;
+  @include tablets{
+    position: absolute;
+    right: 100%;
+  }
+}
+
+
+.tringle__left--blog{
+  @include tablets{
+    height: 100%;
+  }
 }

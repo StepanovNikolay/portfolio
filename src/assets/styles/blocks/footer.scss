@@ -1,7 +1,7 @@
 .footer{
   position: absolute;
   bottom: 1%;
-  height: 150px;
+  height: 170px;
 background: #3b3e46;
 opacity: 0.9;
 width: 100%;
@@ -10,24 +10,81 @@ justify-content: space-between;
 flex-direction: column;
 color: #9e9fa3;
 font-size: 16px;
+@include tablets{
+  align-items: center;
+   height: 170px;
+}
+@include small-phones {
+height: 250px;
+}
 }
 
 .footer-row{
   display: flex;
   justify-content: space-between;
+  @include tablets{
+    width: 95%;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .footer__text{
   width: 400px;
   padding-left: 3%;
+  @include tablets {
+    width: 100%;
+    height: 49px;
+    padding-top: 1%;
+    text-align: center;
+    border-bottom: 1px solid #505563;
+  }
 }
 
+.footer__menu{
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
+  @include small-phones {
+    height: 59px;
+    border-bottom: 1px solid #505563;
+  }
+}
+
+.footer__contacs{
+  @include tablets{
+    position: relative;
+    left: 37%;
+  }
+  @include phones{
+    left: 32%;
+  }
+  @include small-phones {
+    margin-top: 4%;
+    left: 0%
+  }
+}
+
+
+.contacs__list--footer{
+  @include tablets{
+    text-align: right;
+  }
+  @include small-phones {
+    text-align: center;
+  }
+}
 
 
 .menu__title--footer{
   display: flex;
   width: 400px;
   justify-content: space-between;
+  @include small-phones {
+    width: 22rem;
+    margin-top: 3%;
+  }
 }
 
 
@@ -42,6 +99,14 @@ font-size: 16px;
   position: absolute;
  left: 36%;
  bottom: 21%;
+ @include tablets{
+   bottom: 29%;
+   left: 17px;
+ }
+ @include small-phones {
+  bottom: 57%;
+  left: 7.0625rem;
+ }
 }
 
 
@@ -61,11 +126,27 @@ font-size: 16px;
 
 .social__item--footer{
   margin-right: 10%;
+  @include tablets{
+    margin-right: 25%;
+  }
 }
 
 
 .menu__link--footer{
   &:hover{
     color: #2b57a4;
+  }
+}
+
+.text__blu{
+  @include small-phones {
+  width: 186px;
+  }
+}
+
+.footer_blu-text{
+  @include small-phones {
+    display: flex;
+   justify-content: center
   }
 }

@@ -8,7 +8,7 @@
   text-align: center;
   color: #fff;
   padding-top: 2%;
-  @include phones {
+  @include tablets {
      width: 23rem;
   }
 }
@@ -62,6 +62,10 @@
 .auth-block__social{
   margin-top: 8%;
   margin-bottom: 7%;
+  @include tablets{
+    margin-top: 10%;
+    margin-bottom: 11%;
+  }
 }
 
 

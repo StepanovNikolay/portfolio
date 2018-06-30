@@ -8,21 +8,42 @@ justify-content: space-between;
 }
 .tringle--about{
   height: 125%;
+  @include tablets {
+    height: 114%;
+  }
+  @include phones {
+    height: 104%;
+  }
 }
 
 .tringle--blog{
   height: 121%;
+  @include tablets{
+    height: 109%;
+  }
 }
 
 .tringle__left{
  width: 50%;
  height: 100%;
+ @include tablets {
+   height: 57%;
+ }
+ @include phones{
+   height: 30%;
+ }
 }
 
 
 .tringle__right{
  width: 50%;
  height: 100%;
+ @include tablets {
+  height: 57%;
+}
+@include phones{
+  height: 30%;
+}
 }
 
 .polygon__left--about{
@@ -38,7 +59,9 @@ justify-content: space-between;
   height: 100%;
   width: 100%;
   fill: #f4f5f0;
-  
+  @include tablets{
+    fill: #f2f0e8;
+  }
 }
 
 
@@ -53,4 +76,18 @@ justify-content: space-between;
   height:100%;
   width: 100%;
   fill: #faf8f0;
+}
+
+
+.tringle__left--blog{
+  @include tablets{
+  height: 68%;
+  }
+}
+
+
+.tringle__right--blog{
+  @include tablets{
+    height: 68%;
+  }
 }

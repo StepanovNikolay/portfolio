@@ -20,12 +20,25 @@
   align-items: center;
   flex-direction: column;
   padding-left: 18%;
+  @include tablets {
+     width: 22rem;
+  }
+  @include phones{
+    width: 100%;
+    opacity: 1;
+  }
+  @include small-phones {
+    padding-left: 1%;
+  }
 }
 
 .contacs__list--about{
 display: flex;
 width: 560px;
 flex-flow: wrap;
+@include tablets {
+  width: 18rem;
+}
 
 }
 
@@ -52,8 +65,22 @@ flex-flow: wrap;
     right: 43%;
     top: 39%;
   }
-
+ @include small-phones {
+  position: relative;
+  left: 10%;
+ }
 }
 
 
+.map-data {
+  @include phones{
+    width: 100%;
+  }
+}
 
+
+.contacs-data{
+  @include small-phones {
+    width: 100%;
+  }
+}

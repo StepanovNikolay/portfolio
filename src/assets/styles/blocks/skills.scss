@@ -31,6 +31,14 @@
 
 .skills-row__list{
   display: flex;
+  @include tablets {
+    flex-flow: wrap;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    height: 218px;
+    margin-bottom: 10%;
+  }
   
   
   
@@ -56,9 +64,26 @@ text-align: center;
 width:80px ;
 bottom: 50%;
 left: 18%;
+@include tablets{
+  bottom: 70%;
+  
+}
 }
 
 
 .skills-row__item{
   height: 174px;
+  @include tablets{
+    height: 7.875rem;
+  }
+}
+
+
+.skills-list{
+@include tablets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 }

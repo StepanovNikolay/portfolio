@@ -5,15 +5,23 @@
 }
 
 
-.user-description__text{
-  width: 379px;
-}
+
 
 .about__left{
   width: 50%;
   position: relative;
   padding-left: 5%;
   z-index: 1000;
+  @include tablets{
+    height: 46%;
+    width: 100%;
+ text-align: center;
+  min-height: 650px;
+  }
+  @include phones{
+    height: 40%;
+    background: #f2f0e8;
+  }
   
 }
 .user-description__img{
@@ -36,6 +44,9 @@
   height: 100px;
   position: absolute;
   left: 23%;
+  @include tablets {
+    left: 40%;
+  }
 }
 
 
@@ -53,5 +64,44 @@
     position: relative;
     top: 29%;
     right: 18%;
+  }
+}
+
+
+.about__left-content{
+  @include tablets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.about__left-title{
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.user-description__data{
+  @include tablets {
+    padding-left: 9%;
+  }
+}
+
+.user-description__text{
+  width: 379px;
+  @include tablets{
+    width: 30.6875rem;
+    text-align: left;
+  }
+  @include small-phones{
+    width: 26.6875rem
+  }
+}
+
+.block-subtitle--left{
+  @include tablets{
+     width: 100%;
   }
 }
