@@ -1,1 +1,1 @@
-webpackJsonp([2],{4:function(c,n,s){"use strict"}},[4]);
+webpackJsonp([2],{10:function(e,t,s){"use strict";var l;new(((l=s(0))&&l.__esModule?l:{default:l}).default)({el:"#slider-component",components:{info:{template:"#slider-info"},display:{template:"#slider-display"},buttons:{template:"#slider-buttons"}},template:"#slider"})},9:function(e,t,s){"use strict";s(10)}},[9]);

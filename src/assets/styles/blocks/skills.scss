@@ -19,13 +19,14 @@
 .skill__circle{
   fill: transparent;
   stroke: #dfdcd5;
-  stroke-width: 20px;
+  stroke-width: 10Px;
 }
 
 .skill__circle-above{
  stroke: #1056d1;
- stroke-dasharray: 252;
- stroke-dashoffset: 34;
+ stroke-dasharray: 251;
+ stroke-dashoffset: 251;
+ transform-origin: center;
 }
 
 
@@ -62,8 +63,8 @@ color: #737eb1;
 position: relative;
 text-align: center;
 width:80px ;
-bottom: 50%;
-left: 18%;
+top: 41%;
+left: 12%;
 @include tablets{
   bottom: 70%;
   

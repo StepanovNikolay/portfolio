@@ -10,6 +10,9 @@
 
 .about-me__list{
   display: flex;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 
