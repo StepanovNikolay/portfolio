@@ -4,7 +4,7 @@ block variables
   - var title = 'Мои работы'
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='works.bundle.js')
 
 block content
  section.hero.hero--works
@@ -39,7 +39,7 @@ block content
   .myworks
    .block-title.block-title--works мои работы
      img(src="./assets/images/bg/stars3.png", alt="" class="stars-pic stars-pic--works")
- section.slider
+ .slider-container
   #slider-component
   
  section.about-me
@@ -62,6 +62,7 @@ block content
        .about-me__text2 Сабанцев Владимир 
        .about-me__text3 — преподаватель
   .forma-works
+   
    form.form(action="")
     .form-title
       .block-subtitle.block-subtitle--form связаться со мной 

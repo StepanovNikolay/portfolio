@@ -1,29 +1,53 @@
 script(type="text/x-template")#slider
-.slider
- info
- display
- buttons
+ .slider
+   info(
+     :work="currentWork"
+   )
+   display(
+      :work="currentWork"
+   )
+   buttons(
+     :works="works"
+     :currentIndex="currentIndex"
+     @slide="handleSlide"
+   )
 
 script(type="text/x-template")#slider-info
  .slider--container 
    .slider__info
-     .block-subtitle.block-subtitle--works сайт школы онлайн образования
+     transition-group(
+       appear
+       :css="false"
+       @before-enter="callback('before-enter')"
+       @after-enter="callback('after-enter')"
+       @enter="enterHandler"
+     )
+      .block-subtitle.block-subtitle--works(:key="work.title") {{work.title}}
    .slider__text
-     span.text html, css, javascript
+     transition-group(
+       appear
+       :css="false"
+       @before-enter="callback('before-enter')"
+       @after-enter="callback('after-enter')"
+       @enter="enterHandler"
+     )
+      .slider__info-skills(:key="work.skills") {{work.skills}}
    .slider__btn
-     a(href="").slider-click Посмотреть сайт
+     a(:href="work.link" target="_blank").slider-click Посмотреть сайт
       +icon('link','button-pic')  
 
 script(type="text/x-template")#slider-display
  .slider-display
    .slider__block1
-     img(src="./assets/images/bg/fon-block1.png", alt="" class="block-img")
+     img(:src="work.photo", alt="" class="block-img")
 
 script(type="text/x-template")#slider-buttons
  .slider__button  
-   .slider__block
-    .slider-img
-     img(src="./assets/images/bg/fon-block2.jpg", alt="" class="block-fon")
-   .slider__block
-    .slider-img.slider-img--block3
-     img(src="./assets/images/bg/fon-block3.jpg", alt="" class="block-fon") 
+   .slider__block(@click="slide('next')")
+    transition-group(name="slide-down" tag="div").slider__wrap
+     .slider-img(:key="getReqImage('next').photo")
+       img(:src="getReqImage('next').photo", alt="" class="block-fon")
+   .slider__block.slider__block--down(@click="slide('prev')")
+    transition-group(name="slide-up" tag="div").slider__wrap
+     .slider-img.slider-img--block3(:key="getReqImage('prev').photo")
+      img(:src="getReqImage('prev').photo", alt="" class="block-fon") 

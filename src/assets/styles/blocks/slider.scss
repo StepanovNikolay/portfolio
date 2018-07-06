@@ -12,11 +12,13 @@
 .slider-display{
   grid-area: display;
   background: #e3e2de;
+  
 }
 
 .slider__button{
   grid-area: buttons;
   display: flex;
+  overflow: hidden;
  
 }
 
@@ -26,7 +28,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  
+ 
 }
 
 .block-fon{
@@ -80,28 +82,47 @@ height: 100%;
 
 .slider-img{
   position: absolute;
-  left: 0;
-  top: 0;
+  bottom:0; 
   width: 100%;
   height: 100%;
 }
 
 .block-subtitle--works{
-  width: 21.125rem;
+   width: 33.125rem;
 position: relative;
-left: 0;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
-text-align: center;
 height: 7.8125rem;
+white-space: pre;
+flex-flow: no-wrap;
+
+&:after{
+  position: absolute;
+  right: 41%;
+  top: 76%;
+}
+
 }
 
 
-.text{
+.slider__info-skills{
   text-transform: uppercase;
   color: #083c96;
-  
+  font-size: 0;
+  span{
+    font-size: 16px;
+  }
+  &.whitespace {
+    span{
+      font-size: 16px;
+    }
+    &.whitespace {
+      &:after {
+        content: "\00a0";
+      }
+  }
+}
 }
 
 .slider__text{
@@ -111,4 +132,97 @@ height: 7.8125rem;
 
 .block-img{
   width: 80%;
+}
+
+
+.slider__wrap {
+  position: absolute;
+  bottom:0;
+  left: 0;
+   height: 100%;
+   width: 100%;
+}
+
+.slide-down-enter-active, .slide-down-leave-active {
+  transition: 1s;
+}
+
+.slide-down-leave {
+  bottom: 0%;
+}
+
+.slide-down-leave-to {
+  bottom: -100%;
+}
+
+.slide-down-enter {
+  bottom: 100%;
+}
+
+.slide-down-enter-to {
+  bottom: 0%;
+}
+
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: 1s;
+}
+
+.slide-up-leave {
+  bottom: 100%;
+}
+
+.slide-up-leave-to {
+  bottom: 100%;
+}
+
+.slide-up-enter {
+  bottom: -100%;
+}
+
+.slide-up-enter-to {
+  bottom: 0%;
+}
+
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title" : "1 Сайт школы онлайн образования",
+    "skills" : "1 Html, Css, JavaScript",
+    "photo" : "./assets/images/bg/fon-block1.png",
+    "link" : "//google.com"
+  },
+  {
+    "id": 2,
+    "title" : "2 Сайт школы онлайн образования",
+    "skills" : "2 Html, Css, JavaScript",
+    "photo" : "./assets/images/bg/fon-block2.jpg",
+    "link" : "//yandex.ru"
+  },
+  {
+    "id": 3,
+    "title" : "3 Сайт школы онлайн образования",
+    "skills" : "3 Html, Css, JavaScript",
+    "photo" : "./assets/images/bg/fon-block3.jpg",
+    "link" : "//rambler.ru"
+  }
+ ]
